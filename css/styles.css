@@ -3407,15 +3407,34 @@ img.u-pull-left {
     align-items : center;
 }
 
+.about-info__pic-block {
+    position : relative;
+}
+
+.about-info__pic-block::after {
+    content    : "";
+    position   : absolute;
+    top        : 0;
+    right      : 0;
+    bottom     : 0;
+    width      : 60%;
+    background : linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+    pointer-events : none;
+    z-index    : 1;
+}
+
 .about-info__pic {
     object-fit     : cover;
     margin         : 0;
     vertical-align : bottom;
+    position       : relative;
 }
 
 .about-info__text {
     padding     : var(--vspace-3_5) 10vw var(--vspace-2) 0;
     margin-left : -4rem;
+    position    : relative;
+    z-index     : 2;
 }
 
 .about-info__text .text-pretitle {
